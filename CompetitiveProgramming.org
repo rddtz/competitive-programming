@@ -1,0 +1,131 @@
+#+STARTUP: content
+#+TITLE: Notes about competitive programming
+
+* C++ TIPS
+** Fast I/O
+There are some techniques that can be used to make the input/output functions
+faster. Here we have some of then:
+*** Disabling the C and C++ synchronization
+
+#+name: Command to desable the C and C++ I/O synchronization
+#+begin_src C++ :includes '(<bits/stdc++.h> <chrono>)   :results output
+  ios::sync_with_stdio(false);
+#+end_src
+
+You can desable the synchronizaiton between the output and input methods of the
+C and C++ languages, this way they will work independently and the cin and cout
+methods will be fasters.
+
+#+name: Example 1 - Synchronous I/O
+#+begin_src C++ :includes <bits/stdc++.h>  :results output
+
+  using namespace std;
+  using namespace std::chrono;
+
+  auto start = high_resolution_clock::now();
+
+  for(int i = 0; i < 1000; i++){
+    cout << ".";
+  }
+
+  auto end = high_resolution_clock::now();
+
+  auto duration = duration_cast<microseconds>(end - start);
+
+  cout << "\nRuntime: " << duration.count() << " ms \n";
+
+#+end_src
+
+#+RESULTS: Example 1 - Synchronous I/O
+: ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+: Runtime: 42 ms 
+
+#+name: Example 2 - Unsynchronous I/O
+#+begin_src C++ :includes '(<bits/stdc++.h> <chrono>)   :results output
+
+  using namespace std;
+  using namespace std::chrono;
+
+  ios::sync_with_stdio(false);
+
+  auto start = high_resolution_clock::now();
+
+  for(int i = 0; i < 1000; i++){
+    cout << ".";
+  }
+
+  auto end = high_resolution_clock::now();
+
+  auto duration = duration_cast<microseconds>(end - start);
+
+  cout << "\nRuntime: " << duration.count() << " ms \n";
+
+#+end_src
+
+#+RESULTS: Example 2 - Unsynchronous I/O
+: ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+: Runtime: 26 ms 
+
+It is important to note that if the I/O synchronization are disabled, using the C methods can couse some
+confusion:
+
+#+name: Example 3 - Problem using C and C++ output methods unsynchronizeds
+#+begin_src C++ :includes '(<bits/stdc++.h> <chrono>)   :results output
+
+  using namespace std;
+  using namespace std::chrono;
+
+  ios::sync_with_stdio(false);
+
+  auto start = high_resolution_clock::now();
+
+  cout << "a\n";
+  printf("b\n");
+  cout << "c\n";
+
+  auto end = high_resolution_clock::now();
+ 
+  auto duration = duration_cast<microseconds>(end - start);
+
+  cout << "Runtime: " << duration.count() << " ms \n";
+
+#+end_src
+
+#+RESULTS: Example 3 - Problem using C and C++ output methods unsynchronizeds
+: a
+: c
+: Runtime: 13 ms 
+: b
+
+*** Unting CIN and COUT
+
+You can untie the CIN and COUT commands with the above command:
+#+name: Command to desable the C and C++ I/O synchronization
+#+begin_src C++ :includes '(<bits/stdc++.h> <chrono>)   :results output
+  cin.tie(nullptr);
+#+end_src
+
+Doing this, the CIN don't will wait fot the COUT to appears in the screen
+in order to ask for an input and vice-versa. It can be used when you need to altern
+from CIN and COUT in your program.
+
+
+* Algorithms
+Here are some algorithms that may be importan with some uses cases and explanations.
+
+#+name: Exemple C++
+#+begin_src C++ :includes <bits/stdc++.h>  :results output
+
+  using namespace std;
+
+  int n;
+  cin >> n;
+
+  int a=1;
+  int b=1;
+  printf("%d\n", a+b);
+
+#+end_src
+#+RESULTS: Exemple C++
+: 2
+
