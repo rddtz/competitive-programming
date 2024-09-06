@@ -55,8 +55,6 @@ int main(){
 #+end_src
   #+RESULTS: DFS example for matrices
   : DFS with 0 as root node: 0 1 3 4 2 5 7 
-
- 
 - The BFS (brach first search) is also an algorithm for traversing or
   searching a graph. It visits all nodes who are neighboors to the
   actual node before going to the others nodes.
@@ -105,7 +103,6 @@ int main(){
 #+end_src
   #+RESULTS: BFS example for matrices
   : BFS with 0 as root node: 0 1 2 3 4 5 7 
-
 ** Matrices Algorithms
 *** Flood Fill
 Flood fill is a recursive algorithm used to fill a array
