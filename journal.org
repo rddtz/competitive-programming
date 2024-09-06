@@ -24,7 +24,7 @@ Example of a graph with 8 vertex as an 8x8 matrix:
 |0|0|0|0|0|0|1|0|
 
 #+name: DFS example for matrices
-#+header: :includes <bits/stdc++.h>  :results output :eval yes :var graph=example_graph
+#+header: :includes <bits/stdc++.h> :export both :results output :eval yes :var graph=example_graph
 #+begin_src C++ 
 
 #define MAX 8
@@ -58,7 +58,7 @@ int main(){
 : DFS with 0 as root node: 0 1 3 4 2 5 7 
 
 #+name: DFS example for matrices
-#+header: :includes <bits/stdc++.h>  :results output :eval yes :var graph=example_graph
+#+header: :includes <bits/stdc++.h> :export both :results output :eval yes :var graph=example_graph
 #+begin_src C++ 
 
 #define MAX 8
