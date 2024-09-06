@@ -3,7 +3,6 @@
 #+STARTUP: indent
 #+TITLE: My notes about competitive programming
 
-
 * Algorithms
 Here are some algorithms that may be important
 with some uses cases and explanations.
@@ -105,14 +104,73 @@ int main(){
 #+RESULTS: DFS example for matrices
 : BFS with 0 as root node: 0 1 2 3 4 5 7 
 
-*** Dijkstra
+** Matrices Algorithms
+*** Flood Fill
+Flood fill is a recursive algorithm used to fill a array
+or search for rooms in a matrix. The idea of the algorithm is
+find the one object and reproduce it in all the free space that
+aren't filled with it yet.
 
-*** Prim and Kruskal
+Here is an example of the use of flood fill for resolving
+the [[https://cses.fi/problemset/task/1192][counting room problem]] from the CSES site.
 
-** String Algorithms
-** Array and Matrices Algorithmsx
+#+begin_src C++ :includes <bits/stdc++.h> :results output :exports both
+#define MAX 1001
 
-* C++ TIPS
+using namespace std;
+
+void flood_fill(char graph[MAX][MAX], int l, int c){
+
+  graph[l][c] = '#';
+  
+  if(graph[l][c+1] == '.'){
+    flood_fill(graph, l, c+1);
+  }
+  if(graph[l+1][c] == '.'){
+    flood_fill(graph, l+1, c);
+  }
+  if(graph[l-1][c] == '.'){
+    flood_fill(graph, l-1, c);
+  }
+  if(graph[l][c-1] == '.'){
+    flood_fill(graph, l, c-1);
+  }
+ 
+}
+
+int main(){
+
+  ios::sync_with_stdio(false);  
+
+  int l, c;
+  int salas = 0;
+
+  char graph[MAX][MAX];
+  
+  cin >> l >> c;
+  
+  for(int i = 0; i < l; i++){
+    for(int j = 0; j < c; j++){
+      cin >> graph[i][j];
+    }
+  }
+
+  for(int i = 0; i < l; i++){
+    for(int j = 0; j < c; j++){
+      if(graph[i][j] == '.'){
+	      salas++;
+	      flood_fill(graph, i, j);
+      }
+    }
+  }
+
+  cout << salas << '\n';
+  
+  return 0;
+}
+#+end_src
+
+* C++ Tips
 ** Fast I/O
 There are some techniques that can be used to make the input/output functions
 faster. Here we have some of then:
