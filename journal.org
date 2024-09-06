@@ -9,11 +9,7 @@ with some uses cases and explanations.
 ** Graph Algorithms
 *** DFS and BFS
 
-The DFS (depth first search) is an algorithm for traversing or searching a graph.
-It visits all nodes connecteds to the root/starting node in the graph, exploring
-as far as possible each branch before going to the othres.
-
-Example of a graph with 8 vertex as an 8x8 matrix:
+Graph with 8 vertex as an 8x8 matrix used for examples:
 #+name: example_graph
 |0|1|1|0|0|0|0|0|
 |0|0|0|1|1|0|0|0|
@@ -22,6 +18,10 @@ Example of a graph with 8 vertex as an 8x8 matrix:
 |0|0|0|0|1|0|0|0|
 |0|1|0|0|0|0|0|0|
 |0|0|0|0|0|0|1|0|
+
+- The DFS (depth first search) is an algorithm for traversing or searching a graph.
+It visits all nodes connecteds to the root/starting node in the graph, exploring
+as far as possible each branch before going to the othres.
 
 #+name: DFS example for matrices
 #+header: :includes <bits/stdc++.h> :results output :eval yes :var graph=example_graph
@@ -54,10 +54,14 @@ int main(){
 
 #+end_src
 
-#+RESULTS: BFS example for matrices
+#+RESULTS: DFS example for matrices
 : DFS with 0 as root node: 0 1 3 4 2 5 7 
 
-#+name: DFS example for matrices
+- The BFS (brach first search) is also an algorithm for traversing or searching a graph.
+It visits all nodes who are neighboors to the actual node before going
+to the others nodes. 
+
+#+name: BFS example for matrices
 #+header: :includes <bits/stdc++.h> :results output :eval yes :var graph=example_graph
 #+begin_src C++ :exports both
 
@@ -101,8 +105,8 @@ int main(){
 
 #+end_src
 
-#+RESULTS: DFS example for matrices
-: DFS with 0 as root node: 0 1 3 4 2 5 7 
+#+RESULTS: BFS example for matrices
+: BFS with 0 as root node: 0 1 3 4 2 5 7 
 
 ** Matrices Algorithms
 *** Flood Fill
