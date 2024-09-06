@@ -106,7 +106,7 @@ int main(){
 #+end_src
 
 #+RESULTS: BFS example for matrices
-: BFS with 0 as root node: 0 1 3 4 2 5 7 
+: BFS with 0 as root node: 0 1 2 3 4 5 7 
 
 ** Matrices Algorithms
 *** Flood Fill
