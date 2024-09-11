@@ -114,12 +114,9 @@ find the one object and reproduce it in all the free space that
 aren't filled with it yet. (It's basically a DFS)
 
 Here is an example of the use of flood fill for resolving
-the [[https://cses.fi/problemset/task/1192][counting room problem]] from the CSES site.
+the [[./cses_solved/counting_rooms.cpp][counting room problem]] from the [[https://cses.fi/problemset/task/1192][CSES website]].
 
 #+begin_src C++ :includes <bits/stdc++.h> :results output :exports both
-#define MAX 1001
-
-using namespace std;
 
 void flood_fill(char graph[MAX][MAX], int l, int c){
 
@@ -138,37 +135,6 @@ void flood_fill(char graph[MAX][MAX], int l, int c){
     flood_fill(graph, l, c-1);
   }
  
-}
-
-int main(){
-
-  ios::sync_with_stdio(false);  
-
-  int l, c;
-  int salas = 0;
-
-  char graph[MAX][MAX];
-  
-  cin >> l >> c;
-  
-  for(int i = 0; i < l; i++){
-    for(int j = 0; j < c; j++){
-      cin >> graph[i][j];
-    }
-  }
-
-  for(int i = 0; i < l; i++){
-    for(int j = 0; j < c; j++){
-      if(graph[i][j] == '.'){
-	      salas++;
-	      flood_fill(graph, i, j);
-      }
-    }
-  }
-
-  cout << salas << '\n';
-  
-  return 0;
 }
 #+end_src
 
