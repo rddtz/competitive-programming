@@ -1,0 +1,20 @@
+#+STARTUP: content
+#+STARTUP: overview
+#+STARTUP: indent
+#+TITLE: Competitive Programming Studies
+
+I'm using this repository to organize my studies about [[https://en.wikipedia.org/wiki/Competitive_programming][competitive
+programming]].You can find some of my notes in the [[./journal.org][journal.org]] document.
+
+** Problems:
+Here are some sites where you can find competitive programming
+questions:
+- [[https://cses.fi/problemset/][CSES problem set]]
+- [[https://codeforces.com/][Codeforcers]]
+- [[https://judge.beecrowd.com/][Beecrowd]]
+
+** Learning Material:
+In the [[./books][books directory]] there are some books to study and here are a
+list with some websites that can be useful:
+- [[https://usaco.guide/][USACO Guide]]
+- [[https://www.geeksforgeeks.org/competitive-programming-a-complete-guide/][GeeksforGeeks]]
