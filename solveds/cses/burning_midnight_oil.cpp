@@ -44,7 +44,6 @@ int main(){
   ios::sync_with_stdio(false);
 
   cin >> n >> k;
-
   cout << lower_bs(n, 0, n);
 
   return 0;
