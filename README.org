@@ -13,10 +13,10 @@ programming]].
 - [[https://www.tle-eliminators.com/cp-sheet][31 codeforces for each rank]]
 
 ** Learning Material:
-******* Books
+**** Books
 Some books that may be useful can be found at the [[./books][books directory]].
 
-******* Websites
+**** Websites
 The following websites can be useful.
 
 - [[https://usaco.guide/][USACO Guide]]
