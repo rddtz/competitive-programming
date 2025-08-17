@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/1624
 #include <bits/stdc++.h>
 #define ll long long
 #define M 8
@@ -14,8 +15,6 @@ void print(char map[M][M]){
     }
     cout << '\n';
   }
-
-  
 }
 
 int count(char map[M][M], int c){
@@ -33,7 +32,7 @@ int count(char map[M][M], int c){
   for(int l = 0; l < M; l++){
 
     if(map[l][c] != '*'){
-      
+
       for(int i = 0; i < M; i++){
 	for(int j = 0; j < M; j++){
 	  if(i == l || j == c){
@@ -43,7 +42,7 @@ int count(char map[M][M], int c){
 	  }
 	}
       }
-  
+
       for(int i = 1; i < M - l; i++){
 	new_map[l + i][c + i] = '*';
       }
@@ -51,20 +50,16 @@ int count(char map[M][M], int c){
       for(int i = l; i >= 0; i--){
 	new_map[l - i][c + i] = '*';
       }
-      
+
       r += count(new_map, c+1);
-      
     }
   }
-    
   return r;
-  
 }
 
 int main(){
 
   ios::sync_with_stdio(false);
-  
   for(int i = 0; i < M; i++){
     for(int j = 0; j < M; j++){
       cin >> board[i][j];
@@ -72,6 +67,5 @@ int main(){
   }
 
   cout << count(board, 0) << '\n';
-  
   return 0;
 }

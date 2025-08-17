@@ -1,7 +1,7 @@
+# https://cses.fi/problemset/task/1090
 line1 = input()
 line1 = line1.split(' ')
 
-#print(line1)
 n = int(line1[0])
 p = int(line1[1])
 
@@ -9,9 +9,7 @@ c = input()
 c = c.split(" ")
 c = list(map(int, c))
 
-#print(c)
 c = sorted(c)
-#print(c)
 
 l = 0
 h = n-1
@@ -28,6 +26,4 @@ while l <= h:
         else:
                 g += 1
                 h -= 1
-        
 print(g)
-                            

@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/1084
 #include <bits/stdc++.h>
 #define ll long long int
 
@@ -37,7 +38,6 @@ int main(){
     j = starter;
 
     achou = false;
-    
     while(aps[j] <= clients[i] + k && j < m && !achou){
       starter = j;
       if(aps[j] <= clients[i] + k && aps[j] >= clients[i] - k){
@@ -50,6 +50,5 @@ int main(){
   }
 
   cout << results << '\n';
-  
   return 0;
 }

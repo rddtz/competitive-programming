@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/2165
 #include <bits/stdc++.h>
 #define ll long long
 
@@ -33,7 +34,6 @@ int main(){
 
   cout << pow(2,n) - 1 << '\n';
   moves(n,1,3);
-  
 
   return 0;
 }

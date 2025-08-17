@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/1754
 #include <bits/stdc++.h>
 #define ll long long int
 
@@ -10,7 +11,6 @@ int main(){
   ll a, b;
   int t;
   int ah, bh;
-  
   cin >> t;
 
   for(int i = 0; i < t; i++){
@@ -28,9 +28,7 @@ int main(){
    } else {
      cout << "NO\n";
    }
-   
-    
   }
-  
+
   return 0;
 }

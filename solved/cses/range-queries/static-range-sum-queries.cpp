@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/1646
 #include <bits/stdc++.h>
 #define ll long long int
 
@@ -26,8 +27,6 @@ int main(){
 
     cin >> a >> b;
     cout << sums[b] - sums[a-1] << '\n';
-    
   }
-  
   return 0;
 }

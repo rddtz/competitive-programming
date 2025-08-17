@@ -1,3 +1,4 @@
+# https://cses.fi/problemset/task/2205
 n = int(input())
 
 size = pow(2, n)
@@ -12,11 +13,8 @@ l = []
 while(fim <= size):
 
     l = l + [fim] + l
-    
     for i in range(ini,fim):
-        
         print(str.format(c))
- 
         c = c^l[i]
 
     ini = fim

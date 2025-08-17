@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/1092
 #include <bits/stdc++.h>
 #define ll long long int
 
@@ -6,7 +7,7 @@ using namespace std;
 int main(){
 
   ll n; cin >> n;
-  
+
   if((n*(n+1))/2 % 2 || n <= 2){ // If sum == odd
     cout << "NO" << '\n';
   } else {
@@ -24,7 +25,7 @@ int main(){
 	printf("%d %d ", i, i+1);
       }
       cout << n << '\n';
-      
+
     } else { // n == par
       cout << n/2 << '\n';
       for(int i = 0; i < (n/2)/2; i++){
@@ -36,12 +37,12 @@ int main(){
       for(int i = 1; i < (n/2); i+=2){
 	printf("%d %d ", n-i, i+1);
       }
-      cout << '\n'; 
-    }  
+      cout << '\n';
+    }
   }
 
 
-  
+
   return 0;
 
 }

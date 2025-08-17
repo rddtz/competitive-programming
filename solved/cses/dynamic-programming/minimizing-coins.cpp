@@ -1,3 +1,4 @@
+// https://cses.fi/problemset/task/1634
 #include <bits/stdc++.h>
 #define ll long long int
 
@@ -17,7 +18,6 @@ int dpf(int v, int size){
   if(v == 0){
     return 0;
   }
-  
   if(dp[v]){
     return dp[v];
   }
@@ -30,13 +30,11 @@ int dpf(int v, int size){
     if(act <= menor){
       menor = act;
     }
-    
   }
 
   dp[v] = menor;
   return dp[v];
 
-  
 }
 
 int main(){
@@ -59,6 +57,5 @@ int main(){
     cout << r << '\n';
   }
 
-  
   return 0;
 }

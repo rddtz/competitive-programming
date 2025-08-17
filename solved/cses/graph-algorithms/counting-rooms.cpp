@@ -1,5 +1,5 @@
+// https://cses.fi/problemset/task/1192
 #define MAX 1001
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,7 +7,7 @@ using namespace std;
 void flood_fill(char graph[MAX][MAX], int l, int c){
 
   graph[l][c] = '#';
-  
+
   if(graph[l][c+1] == '.'){
     flood_fill(graph, l, c+1);
   }
@@ -20,20 +20,18 @@ void flood_fill(char graph[MAX][MAX], int l, int c){
   if(graph[l][c-1] == '.'){
     flood_fill(graph, l, c-1);
   }
- 
 }
 
 int main(){
 
-  ios::sync_with_stdio(false);  
+  ios::sync_with_stdio(false);
 
   int l, c;
   int salas = 0;
 
   char graph[MAX][MAX];
-  
   cin >> l >> c;
-  
+
   for(int i = 0; i < l; i++){
     for(int j = 0; j < c; j++){
       cin >> graph[i][j];
@@ -50,6 +48,5 @@ int main(){
   }
 
   cout << salas << '\n';
-  
   return 0;
 }
